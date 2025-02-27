@@ -1,0 +1,41 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+  "name": "rika",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "build": {
+    "context": "..",
+    "dockerfile": "./Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "remoteEnv": {
+    "RIKA_MODE": "${localEnv:RIKA_MODE}",
+    "RIKA_DB_STRING": "${localEnv:RIKA_DB_STRING}",
+    //
+    "RIKA_DISCORD_BOT_TOKEN": "${localEnv:RIKA_DISCORD_BOT_TOKEN}",
+    "RIKA_DISCORD_BOT_TYPE": "${localEnv:RIKA_DISCORD_BOT_TYPE}",
+    "RIKA_DISCORD_BOT_DB_STRING": "${localEnv:RIKA_DISCORD_BOT_DB_STRING}",
+  },
+  "runArgs": [
+    "--network=host"
+  ],
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "mhutchie.git-graph",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-python.black-formatter"
+      ]
+    }
+  }
+  // Configure tool-specific properties.
+  // "customizations": {},
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  //"remoteUser": "root"
+}

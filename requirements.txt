@@ -1,0 +1,13 @@
+aiohttp[speedups]~=3.10
+pymongo
+motor
+py-cord[voice]~=2.6
+py-cord[speed]~=2.6
+requests
+httpx
+psutil
+pyshorteners
+fastapi[standard]
+beautifulsoup4
+Pillow
+git+https://github.com/yt-dlp/yt-dlp.git@master #yt-dlp

@@ -1,0 +1,1 @@
+fastapi dev src/backend/app.py --port $PORT;
